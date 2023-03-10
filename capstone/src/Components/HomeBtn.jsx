@@ -33,6 +33,7 @@ button{
     padding: 1rem 1rem;
     outline: none;
     border-radius: 5rem;
+    cursor: pointer;
 }
 svg{
     display: block;

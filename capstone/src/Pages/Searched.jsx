@@ -36,15 +36,13 @@ function Searched() {
 
 const Grid = styled.div`
   display: grid;
-  grid-template-comlumns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 3rem;
 `;
 const Card = styled.div`
-  border: 2px;
-  border-color: black;
   img {
     border-radius: 2rem;
-    text-align: center;
+    width: 100%;
   }
   a {
     text-decoration: none;

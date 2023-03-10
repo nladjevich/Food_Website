@@ -38,6 +38,7 @@ const FormStyled = styled.form`
         outline: none;
         width: 50%;
         border-radius: 3rem;
+        cursor: pointer;
     }
     svg{
         display: block;
