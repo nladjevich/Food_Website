@@ -1,5 +1,5 @@
 import React from 'react'
-import { GiNoodles } from "react-icons/gi";
+import { GiNoodles, GiChecklist } from "react-icons/gi";
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
@@ -9,19 +9,29 @@ function HomeBtn() {
     };
 
   return (
-    <NavLink to={'/'}>
-        <StyledForm onChange={submitHandler}>
-            <button>
-                <GiNoodles></GiNoodles>
-            </button>
-        </StyledForm>
-    </NavLink>
+    <List>
+        <NavLink to={'/'}>
+            <StyledForm onChange={submitHandler}>
+                <button>
+                    <GiNoodles></GiNoodles>
+                </button>
+            </StyledForm>
+        </NavLink>
+        <NavLink to={'/'}>
+            <StyledForm onChange={submitHandler}>
+                <button>
+                    <GiChecklist/>
+                </button>
+            </StyledForm>
+        </NavLink>
+    </List>
+    
   )
 }
 
 const StyledForm = styled.form`
 margin: 0rem 1rem;
-position: absolute;
+position: relative;
 div{
     width: 50%;
 }
@@ -40,5 +50,11 @@ svg{
     margin: auto;
 }
 `;
+
+const List = styled.div`
+    display: flex;
+    margin: 1rem 0rem;
+
+`
 
 export default HomeBtn
