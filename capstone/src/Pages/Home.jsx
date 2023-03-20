@@ -8,7 +8,7 @@ function Home() {
   return (
     <StyledDiv>
       <div>
-        <h1>Find your New Favorite Food</h1>
+        <h1>Find Out About Your Favorite Food!</h1>
         <p>Search for foods in the search bar to find out vast information about foods that you enjoy!</p>
       </div>
         <Random></Random>

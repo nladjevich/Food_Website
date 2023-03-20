@@ -35,8 +35,9 @@ function RandDishes() {
                   <Card>
                     <NavLink to={'/info/' + item.id}>
                       <img src={item.image} alt={item.title} />
-                      <p>{item.title}</p>
-                    </NavLink>
+                      </NavLink>
+                      <h4>{item.title}</h4>
+                    
                   </Card>
                 </SplideSlide>
               );
@@ -63,6 +64,10 @@ const Card = styled.div`
     width: 30rem;
     height: 30rem;
     object-fit: cover;
+    margin-left: 32rem;
+    background-image: linear-gradient(to bottom right, #494949, #313131);
+    filter: drop-shadow(30px 10px 4px grey);
+    
   }
   p {
     position: absolute;
@@ -79,6 +84,11 @@ const Card = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  h4 {
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
   }
 `
 export default RandDishes

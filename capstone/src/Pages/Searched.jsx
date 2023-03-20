@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 function Searched() {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
@@ -25,7 +26,9 @@ function Searched() {
       {searchedRecipes.map((item) => {
         return(
           <Card key={item.id}>
-            <img src={item.image} alt={item.title} />
+            <NavLink to={'/info/' + item.id}>
+              <img src={item.image} alt={item.title} />
+            </NavLink>
             <h4>{item.title}</h4>
           </Card>
         )

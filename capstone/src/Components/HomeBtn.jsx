@@ -17,7 +17,7 @@ function HomeBtn() {
                 </button>
             </StyledForm>
         </NavLink>
-        <NavLink to={'/'}>
+        <NavLink to={'/cuisines/'}>
             <StyledForm onChange={submitHandler}>
                 <button>
                     <GiChecklist/>
