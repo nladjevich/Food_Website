@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Random from '../Components/Random'
 
 
 
+
 function Home() {
+  const [random, setRandom] = useState([]);
+
+  const fetchImage = async () => {
+    const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=1`);
+    const randomData = await api.json();
+    setRandom(randomData.recipes);
+  }
+
+  useEffect(() => {
+    fetchImage();
+    console.log(random);
+  }, []);
+
+
   return (
     <StyledDiv>
       <div>
@@ -13,7 +28,7 @@ function Home() {
       </div>
         <Random></Random>
         <p>Or press the button to recive a random dish from us.</p>
-
+        <img src={random.image} alt="" />
     </StyledDiv>
   )
 }
