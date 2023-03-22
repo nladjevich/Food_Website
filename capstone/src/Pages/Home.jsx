@@ -28,7 +28,6 @@ function Home() {
       </div>
         <Random></Random>
         <p>Or press the button to recive a random dish from us.</p>
-        <img src={random.image} alt="" />
     </StyledDiv>
   )
 }
