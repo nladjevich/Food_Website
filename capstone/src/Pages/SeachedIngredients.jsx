@@ -4,13 +4,13 @@ import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-function Searched() {
+function SearchedIngredients() {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
   let params = useParams();
 
   const getSearched = async (name) => {
     const data = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}&includeIngredients=${name}`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&includeIngredients=${name}`
     );
     const recipes = await data.json();
     setSearchedRecipes(recipes.results);
@@ -56,4 +56,4 @@ const Card = styled.div`
   }
 `;
 
-export default Searched
+export default SearchedIngredients

@@ -2,12 +2,13 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Params, useParams } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Info() {
 
   let params = useParams();
   const [details, setDetails] = useState({});
-  const [similar, setSimilar] = useState({});
+  const [similar, setSimilar] = useState([]);
   const [activeTab, setActiveTab] = useState('instructions')
 
   const fetchDetails = async () => {
@@ -54,9 +55,16 @@ function Info() {
         </ul>
       )}
     </InfoDiv>
-    <div>
-      {similar.title}
-    </div>
+    <SimilarItems>
+      <h4>Similar Items</h4>
+      {similar.map((items) => (
+        <NavLink to={'/info/' + items.id}>
+          <Card key={items.id}>
+            <p>{items.title}</p>
+          </Card>
+        </NavLink>
+      ))}
+    </SimilarItems>
    </DetailWrapper>
   )
 }
@@ -101,6 +109,18 @@ const Button = styled.button`
 const InfoDiv = styled.div`
   margin-left: 10rem;
   border: 2px solid black;
+`
+const SimilarItems = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 1brem;
+  left-margin: 2rem;
+`
+const Card = styled.div`
+  border: 2px solid black;
+  border-radius: 1rem;
+  margin-left: 2rem;
+  padding: 5px;
 `
 
 export default Info

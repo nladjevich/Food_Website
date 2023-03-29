@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Random from '../Components/Random'
+import IngredientsBtn from '../Components/IngredientsBtn';
+import IngredientSearch from '../Components/IngredientSearch';
 
 
 
@@ -28,6 +30,9 @@ function Home() {
       </div>
         <Random></Random>
         <p>Or press the button to recive a random dish from us.</p>
+        <div>
+          <IngredientSearch></IngredientSearch>
+        </div>
     </StyledDiv>
   )
 }
