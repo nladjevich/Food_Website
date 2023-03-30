@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Random from '../Components/Random'
-import IngredientsBtn from '../Components/IngredientsBtn';
 import IngredientSearch from './IngredientSearch';
+import Logout from '../Components/Logout';
 
 
 
@@ -24,6 +24,7 @@ function Home() {
 
   return (
     <StyledDiv>
+      <Logout></Logout>
       <div>
         <h1>Find Out About Your Favorite Food!</h1>
         <p>Search for foods in the search bar to find out vast information about foods that you enjoy!</p>

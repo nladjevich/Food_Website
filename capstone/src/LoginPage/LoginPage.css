@@ -1,0 +1,14 @@
+.error {
+  color: red;
+}
+
+label {
+  display: table-caption;
+  margin: 1rem;
+
+}
+
+.mydiv {
+  justify-content: center;
+}
+
