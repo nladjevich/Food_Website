@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import IngredientSearch from './IngredientSearch';
+import IngredientSearch from '../Pages/IngredientSearch';
 import styled from 'styled-components';
 
 

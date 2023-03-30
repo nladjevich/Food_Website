@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Random from '../Components/Random'
 import IngredientsBtn from '../Components/IngredientsBtn';
-import IngredientSearch from '../Components/IngredientSearch';
+import IngredientSearch from './IngredientSearch';
 
 
 
